@@ -22,7 +22,7 @@ func main() {
 	buf := make([]byte, 4096)
 	for {
 		size, err := uart.ReadAggregation(buf, serial.INFINITE, 50*time.Millisecond)
-		//size, err := uart.ReadAggregation(buf, 100*time.Millisecond)
+		//size, err := uart.Read(buf, 100*time.Millisecond)
 		if err != nil {
 			fmt.Printf("%s\n", err)
 			break
